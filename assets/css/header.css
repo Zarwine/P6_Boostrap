@@ -1,0 +1,67 @@
+.titre-principale {
+    width: 100%;
+    margin-left: 5%;
+}
+header {
+    display:flex;
+    flex-flow: row wrap;
+    background-color: lightgray;
+    width: 100vw;
+    top: 0;
+    justify-content: flex-end;
+}
+.menu-sticky {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    background-color: darkgray;
+    z-index: 1;
+    top: 0;
+}
+.menu-container {
+display: flex;
+}
+.menu-container li{
+padding: 20px;
+list-style-type: none;
+}
+.menu-container li:hover{
+background-color: darkgray;
+}
+.menu {
+    position: relative;
+}
+.menu::after{
+    content:" ▼";
+    font-size: 0.7em;
+}
+.menu li {  
+    padding: 30px;
+}
+.sous-menu {
+    border-top: 1px solid black;
+    display:none;
+    padding-left: 0;
+    position: absolute;
+    background-color: grey;
+    transition: all ease 0.4s;
+    z-index: 1;
+    width:100%;
+    left:0px;
+    margin-top: 20px;
+}
+.sous-menu li {
+    padding: 3px 10px;
+}
+.sous-menu li:hover {
+    background-color: darkgray;
+}
+.menu:hover .sous-menu,
+.sous-menu:hover {
+    display: block;
+}
+
+.menu-container > ul li:hover .sous-menu{
+    display:block,
+}
